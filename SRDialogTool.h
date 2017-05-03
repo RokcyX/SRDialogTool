@@ -92,5 +92,6 @@ typedef NS_ENUM(NSInteger,SRDialogViewAnimateType) {
  */
 +(void)showWaitWithMessage:(NSString*)message title:(NSString*)title;
 
++(void)hide;
 
 @end

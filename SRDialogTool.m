@@ -112,7 +112,7 @@
 }
 
 -(void)doSuccessAnimate{
-    CGPoint flagSecondPoint=CGPointMake(realDialogWidth*0.5, CGRectGetMaxY(_messageLb.frame)+2*circleRadius);
+    CGPoint flagSecondPoint=CGPointMake(realDialogWidth*0.5-5, CGRectGetMaxY(_messageLb.frame)+2*circleRadius);
     UIBezierPath *flagPath=[UIBezierPath bezierPath];
     [flagPath moveToPoint:CGPointMake(flagSecondPoint.x-15, flagSecondPoint.y-15)];
     [flagPath addLineToPoint:flagSecondPoint];
@@ -127,7 +127,7 @@
     flagLayer.strokeColor=[[UIColor greenColor] CGColor];
     flagLayer.fillColor=[[UIColor clearColor] CGColor];
     [self.layer addSublayer:flagLayer];
-    
+
     CABasicAnimation *flagAnimate=[CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     flagAnimate.fromValue=@(0);
     flagAnimate.toValue=@(1);
